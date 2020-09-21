@@ -1,5 +1,16 @@
 var body = document.body;
-fetch('https://api.github.com/users/saifieva98')
+let url = window.location.toString();
+
+const getName = function() {
+  let getUrl = url.split('=');
+  let name = getUrl[1]; //
+  if(name == undefined) {
+  name = 'saifieva98';
+  }
+return name;
+}
+
+fetch(`https://api.github.com/users/${getName(url)}`)
 	.then(res => res.json())
 	.then(json => {
    	let name = document.createElement('h1');
