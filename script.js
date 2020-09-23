@@ -1,7 +1,7 @@
 var body = document.body;
 let url = window.location.toString();
 let getName = (url) =>  {
-	let g = url.replace('=');
+	let g = url.split('=');
 	let name = g[1];
 	if (name === undefined) {
 			name = 'saifieva98';
