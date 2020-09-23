@@ -1,10 +1,10 @@
 var body = document.body;
-let url = window.location.toString();
+let url = window.location.href;
 let getName = (url) =>  {
 	let g = url.split('=');
 	let name = g[1];
 	if (name == undefined) {
-			name = 'saifieva98';
+			name = 'saifieva98'
 	}
 	return name;
 }
